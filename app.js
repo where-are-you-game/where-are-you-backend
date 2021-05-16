@@ -8,6 +8,7 @@ const cors = require("cors");
 const connectMongoDB = require("./loader/database");
 
 const gameRouter = require("./routes/game");
+const reviewRouter = require("./routes/review");
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.use(cors({
 }));
 
 app.use("/game", gameRouter);
+app.use("/review", reviewRouter);
 
 app.use((req, res, next) => {
   next(createError(404));
