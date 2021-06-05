@@ -12,6 +12,8 @@ const connectMongoDB = () => {
   const db = mongoose.connection;
   db.on("error", (err) => console.error(`DB connection Error : \n${err}`));
   db.once("open", () => console.log("MongoDB Connected"));
+
+  return db;
 };
 
 module.exports = connectMongoDB;
