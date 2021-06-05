@@ -1,10 +1,15 @@
 {
-  "name": "backend",
-  "version": "0.0.0",
+  "name": "where-are-you-backend",
+  "version": "0.1.0",
   "private": true,
+  "bugs": {
+    "url": "https://github.com/where-are-you-game/where-are-you-backend",
+    "email": "youlimjeon@gmail.com"
+  },
   "scripts": {
     "start": "NODE_ENV=production ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www",
+    "test": "jest"
   },
   "engines": {
     "node": "14.16.0"
@@ -22,6 +27,8 @@
   "devDependencies": {
     "eslint": "^7.25.0",
     "eslint-plugin-import": "^2.22.1",
-    "nodemon": "^2.0.7"
+    "jest": "^27.0.4",
+    "nodemon": "^2.0.7",
+    "supertest": "^6.1.3"
   }
 }
