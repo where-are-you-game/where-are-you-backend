@@ -13,7 +13,9 @@ const reviewRouter = require("./routes/review");
 
 const app = express();
 
-connectMongoDB();
+if (process.env.NODE_ENV !== "test") {
+  connectMongoDB();
+}
 
 app.use(logger("dev"));
 app.use(express.json());
